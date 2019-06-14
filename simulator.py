@@ -16,6 +16,7 @@ import signal
 import time
 import copy
 import traceback
+import team59
 
 TIME = 24
 MAX_PTS = 86
@@ -361,16 +362,16 @@ if __name__ == '__main__':
 	obj1 = ''
 	obj2 = ''
 	option = sys.argv[1]	
-	if option == '1':
+	if option == '30':
 		obj1 = Random_Player()
 		obj2 = Random_Player()
 
-	elif option == '2':
+	elif option == '1':
 		obj1 = Random_Player()
-		obj2 = Manual_Player()
-	elif option == '3':
+		obj2 = team59.Team59()
+	elif option == '2':
 		obj1 = Manual_Player()
-		obj2 = Manual_Player()
+		obj2 = team59.Team59()
 	else:
 		print 'Invalid option'
 		sys.exit(1)
